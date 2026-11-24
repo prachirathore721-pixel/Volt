@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>VOLT — Inside the Lab</title>
+  <meta name="description" content="Inside the VOLT lab — 24,000 sq ft of strength floor, engine room and recovery suite. See the space built to break limits." />
+  <meta name="theme-color" content="#070807" />
+  <meta name="color-scheme" content="dark" />
+  <meta name="robots" content="index, follow" />
+  <link rel="canonical" href="https://voltstrength.lab/inside.html" />
+  <link rel="icon" href="favicon.svg" type="image/svg+xml" />
+  <link rel="apple-touch-icon" href="favicon.svg" />
+  <link rel="manifest" href="site.webmanifest" />
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="VOLT — Strength Lab" />
+  <meta property="og:title" content="VOLT — Inside the Lab" />
+  <meta property="og:description" content="24,000 sq ft of strength floor, engine room and recovery suite. See the space built to break limits." />
+  <meta property="og:url" content="https://voltstrength.lab/inside.html" />
+  <meta property="og:image" content="https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?auto=format&fit=crop&w=1200&h=630&q=70" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="VOLT — Inside the Lab" />
+  <meta name="twitter:description" content="24,000 sq ft built to break limits." />
+  <meta name="twitter:image" content="https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?auto=format&fit=crop&w=1200&h=630&q=70" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="preconnect" href="https://images.unsplash.com" crossorigin />
+  <link rel="preload" as="image" fetchpriority="high" href="https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?auto=format&fit=crop&w=1280&q=68" />
+  <link href="https://fonts.googleapis.com/css2?family=Anton&family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <svg class="svg-defs" aria-hidden="true">
+    <filter id="duotone" color-interpolation-filters="sRGB">
+      <feColorMatrix type="matrix" values="0.299 0.587 0.114 0 0  0.299 0.587 0.114 0 0  0.299 0.587 0.114 0 0  0 0 0 1 0"/>
+      <feComponentTransfer>
+        <feFuncR type="table" tableValues="0.03 0.80"/><feFuncG type="table" tableValues="0.09 1.0"/><feFuncB type="table" tableValues="0.05 0.12"/>
+      </feComponentTransfer>
+    </filter>
+  </svg>
+  <div class="scroll-prog" id="scrollProg" aria-hidden="true"></div>
+  <div class="grain" aria-hidden="true"></div>
+  <div class="cursor" id="cursor"><span id="cursorLabel"></span></div>
+  <div class="cursor-dot" id="cursorDot"></div>
+  <div class="loader" id="loader">
+    <div class="loader__word"><span>V</span><span>O</span><span>L</span><span>T</span></div>
+    <div class="loader__count"><span id="loaderNum">0</span><i>%</i></div>
+    <div class="loader__bar"><div class="loader__fill" id="loaderFill"></div></div>
+  </div>
+
+  <header class="nav" id="nav">
+    <a href="index.html" class="nav__logo" data-cursor>VOLT<span>°</span></a>
+    <nav class="nav__links">
+      <a href="programs.html" data-cursor>Programs</a>
+      <a href="inside.html" class="is-active" data-cursor>Inside</a>
+      <a href="coaches.html" data-cursor>Coaches</a>
+      <a href="join.html" data-cursor>Join</a>
+    </nav>
+    <a href="join.html" class="nav__cta" data-cursor data-magnetic><span>Start Training</span><em>→</em></a>
+    <button class="nav__burger" id="burger" aria-label="menu"><span></span><span></span></button>
+  </header>
+
+  <section class="page-hero">
+    <div class="page-hero__media"><img class="duo" alt="Gym floor"
+      src="https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?auto=format&fit=crop&w=1280&q=68" /></div>
+    <div class="page-hero__scrim"></div>
+    <div class="page-hero__bgword" aria-hidden="true">LAB</div>
+    <div class="page-hero__inner">
+      <span class="page-hero__tag">( Inside the Lab )</span>
+      <h1 class="page-hero__title"><span class="lh"><span>WHERE</span></span><span class="lh"><span class="accent">WORK</span></span><span class="lh"><span>GETS REAL</span></span></h1>
+      <p class="page-hero__sub">24,000 sq ft of engineered training space — free weights, platforms, an engine room and full recovery suite. No mirrors-and-selfies gym. A lab.</p>
+    </div>
+  </section>
+
+  <section class="marquee marquee--rev" aria-hidden="true">
+    <div class="marquee__track" data-dir="1">
+      <span>FREE WEIGHTS</span><span class="dot">⚡</span><span>PLATFORMS</span><span class="dot">⚡</span>
+      <span>ENGINE ROOM</span><span class="dot">⚡</span><span>RECOVERY</span><span class="dot">⚡</span>
+      <span>FREE WEIGHTS</span><span class="dot">⚡</span><span>PLATFORMS</span><span class="dot">⚡</span>
+      <span>ENGINE ROOM</span><span class="dot">⚡</span><span>RECOVERY</span><span class="dot">⚡</span>
+    </div>
+  </section>
+
+  <!-- Pinned horizontal gallery -->
+  <section class="gallery" id="gallery">
+    <div class="gallery__pin" id="galleryPin">
+      <div class="gallery__intro">
+        <span class="section-tag">( The Floor )</span>
+        <h2>Step<br/>inside<br/>the <span class="accent">lab.</span></h2>
+        <span class="gallery__hint">scroll →</span>
+      </div>
+      <figure class="gshot"><img class="duo" loading="lazy" alt="Free weights"
+        src="https://images.unsplash.com/photo-1558611848-73f7eb4001a1?auto=format&fit=crop&w=820&q=70" /><figcaption>01 · Free Weights</figcaption></figure>
+      <figure class="gshot tall"><img class="duo" loading="lazy" alt="Conditioning"
+        src="https://images.unsplash.com/photo-1518459031867-a89b944bffe4?auto=format&fit=crop&w=820&q=70" /><figcaption>02 · Conditioning</figcaption></figure>
+      <figure class="gshot"><img class="duo" loading="lazy" alt="Engine room"
+        src="https://images.unsplash.com/photo-1540497077202-7c8a3999166f?auto=format&fit=crop&w=820&q=70" /><figcaption>03 · Engine Room</figcaption></figure>
+      <figure class="gshot tall"><img class="duo" loading="lazy" alt="The rack"
+        src="https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?auto=format&fit=crop&w=820&q=70" /><figcaption>04 · The Rack</figcaption></figure>
+      <figure class="gshot"><img class="duo" loading="lazy" alt="Recovery"
+        src="https://images.unsplash.com/photo-1532384748853-8f54a8f476e2?auto=format&fit=crop&w=820&q=70" /><figcaption>05 · Recovery</figcaption></figure>
+    </div>
+  </section>
+
+  <div class="sec-head"><span class="section-tag reveal-up">( Zones )</span><h2 class="reveal-up">Four rooms, <span class="accent">one engine.</span></h2></div>
+  <section class="zones">
+    <div class="zone reveal-up"><img class="duo" loading="lazy" alt="Strength floor"
+      src="https://images.unsplash.com/photo-1558611848-73f7eb4001a1?auto=format&fit=crop&w=760&q=70" />
+      <div class="zone__body"><b>01</b><h3>Strength Floor</h3><p>Calibrated racks, platforms and a ton of iron. Where the heavy work lives.</p></div></div>
+    <div class="zone reveal-up"><img class="duo" loading="lazy" alt="Engine room"
+      src="https://images.unsplash.com/photo-1532384748853-8f54a8f476e2?auto=format&fit=crop&w=760&q=70" />
+      <div class="zone__body"><b>02</b><h3>Engine Room</h3><p>Rowers, bikes, ski-ergs and the kind of conditioning that rewires your gas tank.</p></div></div>
+    <div class="zone reveal-up"><img class="duo" loading="lazy" alt="Recovery suite"
+      src="https://images.unsplash.com/photo-1571019614242-c5c5dee9f50b?auto=format&fit=crop&w=760&q=70" />
+      <div class="zone__body"><b>03</b><h3>Recovery Suite</h3><p>Cold plunge, sauna and mobility space, so you grow between the sessions.</p></div></div>
+  </section>
+
+  <section class="statband">
+    <div class="statband__img"><img class="duo" loading="lazy" alt="Inside intensity"
+      src="https://images.unsplash.com/photo-1540497077202-7c8a3999166f?auto=format&fit=crop&w=1280&q=68" /></div>
+    <div class="statband__row">
+      <div class="sb"><b class="js-count" data-count="24000">0</b><small>Sq ft of floor</small></div>
+      <div class="sb"><b class="js-count" data-count="12">0</b><small>Training zones</small></div>
+      <div class="sb"><b class="js-count" data-count="24">0</b><small>/7 access</small></div>
+    </div>
+  </section>
+
+  <section class="join" id="join">
+    <div class="join__img"><img class="duo" loading="lazy" alt="Join VOLT"
+      src="https://images.unsplash.com/photo-1534438327276-14e5300c3a48?auto=format&fit=crop&w=1280&q=68" /></div>
+    <div class="join__spin" aria-hidden="true"><span>ENTER</span><span>ENTER</span><span>ENTER</span><span>ENTER</span></div>
+    <div class="join__inner">
+      <span class="section-tag reveal-up">( Come see it )</span>
+      <h2 class="join__title reveal-lines">Book a tour of<br/>the <span class="accent">lab.</span></h2>
+      <p class="reveal-up">Walk the floor, meet the coaches and try a session — on the house.</p>
+      <a href="join.html" class="btn-big" data-cursor data-magnetic><span>Claim Free Session</span><em>⚡</em></a>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="footer__big">VOLT°</div>
+    <div class="footer__cols">
+      <div><h5>Visit</h5><p>114 Forge Street<br/>Industrial Quarter</p></div>
+      <div><h5>Hours</h5><p>Open 24 / 7<br/>365 days</p></div>
+      <div><h5>Social</h5><p>Instagram<br/>YouTube · TikTok</p></div>
+      <div><h5>Contact</h5><p>train@volt.lab<br/>+1 (555) 017-9930</p></div>
+    </div>
+    <div class="footer__base"><span>© 2026 VOLT Strength Lab</span><span>Built to break limits.</span></div>
+  </footer>
+
+  <script defer src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script defer src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+  <script defer src="script.js"></script>
+</body>
+</html>

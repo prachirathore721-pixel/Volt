@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>VOLT — The Coaches</title>
+  <meta name="description" content="Meet the VOLT coaches — strength, Olympic lifting, conditioning and mobility specialists who live the work. Get matched to yours." />
+  <meta name="theme-color" content="#070807" />
+  <meta name="color-scheme" content="dark" />
+  <meta name="robots" content="index, follow" />
+  <link rel="canonical" href="https://voltstrength.lab/coaches.html" />
+  <link rel="icon" href="favicon.svg" type="image/svg+xml" />
+  <link rel="apple-touch-icon" href="favicon.svg" />
+  <link rel="manifest" href="site.webmanifest" />
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="VOLT — Strength Lab" />
+  <meta property="og:title" content="VOLT — The Coaches" />
+  <meta property="og:description" content="Strength, Olympic, conditioning and mobility specialists who live the work. Get matched to yours." />
+  <meta property="og:url" content="https://voltstrength.lab/coaches.html" />
+  <meta property="og:image" content="https://images.unsplash.com/photo-1567013127542-490d757e51fc?auto=format&fit=crop&w=1200&h=630&q=70" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="VOLT — The Coaches" />
+  <meta name="twitter:description" content="Trained by obsessives. Get matched to yours." />
+  <meta name="twitter:image" content="https://images.unsplash.com/photo-1567013127542-490d757e51fc?auto=format&fit=crop&w=1200&h=630&q=70" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="preconnect" href="https://images.unsplash.com" crossorigin />
+  <link rel="preload" as="image" fetchpriority="high" href="https://images.unsplash.com/photo-1567013127542-490d757e51fc?auto=format&fit=crop&w=1280&q=68" />
+  <link href="https://fonts.googleapis.com/css2?family=Anton&family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <svg class="svg-defs" aria-hidden="true">
+    <filter id="duotone" color-interpolation-filters="sRGB">
+      <feColorMatrix type="matrix" values="0.299 0.587 0.114 0 0  0.299 0.587 0.114 0 0  0.299 0.587 0.114 0 0  0 0 0 1 0"/>
+      <feComponentTransfer>
+        <feFuncR type="table" tableValues="0.03 0.80"/><feFuncG type="table" tableValues="0.09 1.0"/><feFuncB type="table" tableValues="0.05 0.12"/>
+      </feComponentTransfer>
+    </filter>
+  </svg>
+  <div class="scroll-prog" id="scrollProg" aria-hidden="true"></div>
+  <div class="grain" aria-hidden="true"></div>
+  <div class="cursor" id="cursor"><span id="cursorLabel"></span></div>
+  <div class="cursor-dot" id="cursorDot"></div>
+  <div class="loader" id="loader">
+    <div class="loader__word"><span>V</span><span>O</span><span>L</span><span>T</span></div>
+    <div class="loader__count"><span id="loaderNum">0</span><i>%</i></div>
+    <div class="loader__bar"><div class="loader__fill" id="loaderFill"></div></div>
+  </div>
+
+  <header class="nav" id="nav">
+    <a href="index.html" class="nav__logo" data-cursor>VOLT<span>°</span></a>
+    <nav class="nav__links">
+      <a href="programs.html" data-cursor>Programs</a>
+      <a href="inside.html" data-cursor>Inside</a>
+      <a href="coaches.html" class="is-active" data-cursor>Coaches</a>
+      <a href="join.html" data-cursor>Join</a>
+    </nav>
+    <a href="join.html" class="nav__cta" data-cursor data-magnetic><span>Start Training</span><em>→</em></a>
+    <button class="nav__burger" id="burger" aria-label="menu"><span></span><span></span></button>
+  </header>
+
+  <section class="page-hero">
+    <div class="page-hero__media"><img class="duo" alt="Coach training"
+      src="https://images.unsplash.com/photo-1567013127542-490d757e51fc?auto=format&fit=crop&w=1280&q=68" /></div>
+    <div class="page-hero__scrim"></div>
+    <div class="page-hero__bgword" aria-hidden="true">COACH</div>
+    <div class="page-hero__inner">
+      <span class="page-hero__tag">( The Coaches )</span>
+      <h1 class="page-hero__title"><span class="lh"><span>TRAINED BY</span></span><span class="lh"><span class="accent">OBSESSIVES</span></span></h1>
+      <p class="page-hero__sub">Every coach here competes, studies and lives it. You don't get a timetable — you get a person whose job is your next PR.</p>
+    </div>
+  </section>
+
+  <section class="marquee" aria-hidden="true">
+    <div class="marquee__track">
+      <span>STRENGTH</span><span class="dot">⚡</span><span>OLYMPIC</span><span class="dot">⚡</span>
+      <span>CONDITIONING</span><span class="dot">⚡</span><span>MOBILITY</span><span class="dot">⚡</span>
+      <span>STRENGTH</span><span class="dot">⚡</span><span>OLYMPIC</span><span class="dot">⚡</span>
+      <span>CONDITIONING</span><span class="dot">⚡</span><span>MOBILITY</span><span class="dot">⚡</span>
+    </div>
+  </section>
+
+  <section class="cprofile">
+    <div class="cprofile__img reveal-up"><img loading="lazy" alt="Dmitri Volkov"
+      src="https://images.unsplash.com/photo-1567013127542-490d757e51fc?auto=format&fit=crop&w=760&q=70" /></div>
+    <div class="cprofile__text">
+      <div class="cprofile__n reveal-up">01</div>
+      <h2 class="reveal-up">Dmitri Volkov</h2>
+      <div class="spec reveal-up">Strength &amp; Powerlifting</div>
+      <p class="reveal-up">National-level powerlifter turned coach. Dmitri builds brutal, patient strength — the kind that shows up under a loaded bar when it matters. Fifteen years, zero shortcuts.</p>
+      <div class="cprofile__stats reveal-up">
+        <div><b class="js-count" data-count="15">0</b><small>Yrs coaching</small></div>
+        <div><b class="js-count" data-count="320">0</b><small>Athletes</small></div>
+        <div><b class="js-count" data-count="42">0</b><small>Meet podiums</small></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="cprofile">
+    <div class="cprofile__img reveal-up"><img loading="lazy" alt="Aria Reyes"
+      src="https://images.unsplash.com/photo-1594381898411-846e7d193883?auto=format&fit=crop&w=760&q=70" /></div>
+    <div class="cprofile__text">
+      <div class="cprofile__n reveal-up">02</div>
+      <h2 class="reveal-up">Aria Reyes</h2>
+      <div class="spec reveal-up">Olympic Lifting</div>
+      <p class="reveal-up">Ex-national team lifter with an eye for technique most people can't see. Aria turns raw athletes into explosive ones — snatch, clean &amp; jerk, and the confidence to move fast under load.</p>
+      <div class="cprofile__stats reveal-up">
+        <div><b class="js-count" data-count="11">0</b><small>Yrs coaching</small></div>
+        <div><b class="js-count" data-count="240">0</b><small>Athletes</small></div>
+        <div><b class="js-count" data-count="3">0</b><small>Nat. records</small></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="cprofile">
+    <div class="cprofile__img reveal-up"><img loading="lazy" alt="Kai Nakamura"
+      src="https://images.unsplash.com/photo-1583454110551-21f2fa2afe61?auto=format&fit=crop&w=760&q=70" /></div>
+    <div class="cprofile__text">
+      <div class="cprofile__n reveal-up">03</div>
+      <h2 class="reveal-up">Kai Nakamura</h2>
+      <div class="spec reveal-up">Conditioning</div>
+      <p class="reveal-up">Endurance athlete and metabolic-conditioning specialist. Kai builds engines — the kind that keep going when everyone else has stopped. Expect to find a gear you didn't know you had.</p>
+      <div class="cprofile__stats reveal-up">
+        <div><b class="js-count" data-count="9">0</b><small>Yrs coaching</small></div>
+        <div><b class="js-count" data-count="180">0</b><small>Athletes</small></div>
+        <div><b class="js-count" data-count="7">0</b><small>Ultras run</small></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="cprofile">
+    <div class="cprofile__img reveal-up"><img loading="lazy" alt="Sana Verma"
+      src="https://images.unsplash.com/photo-1550345332-09e3ac987658?auto=format&fit=crop&w=760&q=70" /></div>
+    <div class="cprofile__text">
+      <div class="cprofile__n reveal-up">04</div>
+      <h2 class="reveal-up">Sana Verma</h2>
+      <div class="spec reveal-up">Mobility &amp; Rehab</div>
+      <p class="reveal-up">Physio-trained movement coach who keeps the whole team training. Sana restores range, bulletproofs joints and gets people back from injury stronger than they left.</p>
+      <div class="cprofile__stats reveal-up">
+        <div><b class="js-count" data-count="13">0</b><small>Yrs coaching</small></div>
+        <div><b class="js-count" data-count="400">0</b><small>Athletes</small></div>
+        <div><b class="js-count" data-count="98">0</b><small>% return rate</small></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="join" id="join">
+    <div class="join__img"><img class="duo" loading="lazy" alt="Train with a coach"
+      src="https://images.unsplash.com/photo-1534438327276-14e5300c3a48?auto=format&fit=crop&w=1280&q=68" /></div>
+    <div class="join__spin" aria-hidden="true"><span>MEET</span><span>MEET</span><span>MEET</span><span>MEET</span></div>
+    <div class="join__inner">
+      <span class="section-tag reveal-up">( Get matched )</span>
+      <h2 class="join__title reveal-lines">Find your<br/><span class="accent">coach.</span></h2>
+      <p class="reveal-up">Tell us your goal and we'll pair you with the obsessive who'll get you there.</p>
+      <a href="join.html" class="btn-big" data-cursor data-magnetic><span>Claim Free Session</span><em>⚡</em></a>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="footer__big">VOLT°</div>
+    <div class="footer__cols">
+      <div><h5>Visit</h5><p>114 Forge Street<br/>Industrial Quarter</p></div>
+      <div><h5>Hours</h5><p>Open 24 / 7<br/>365 days</p></div>
+      <div><h5>Social</h5><p>Instagram<br/>YouTube · TikTok</p></div>
+      <div><h5>Contact</h5><p>train@volt.lab<br/>+1 (555) 017-9930</p></div>
+    </div>
+    <div class="footer__base"><span>© 2026 VOLT Strength Lab</span><span>Built to break limits.</span></div>
+  </footer>
+
+  <script defer src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script defer src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+  <script defer src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>VOLT — Strength Lab</title>
+  <meta name="description" content="VOLT Strength Lab — a dark, high-intensity gym engineered for measurable results. Real coaching, 24/7 access and four training programs. First session free." />
+  <meta name="theme-color" content="#070807" />
+  <meta name="color-scheme" content="dark" />
+  <meta name="robots" content="index, follow" />
+  <link rel="canonical" href="https://voltstrength.lab/" />
+  <link rel="icon" href="favicon.svg" type="image/svg+xml" />
+  <link rel="apple-touch-icon" href="favicon.svg" />
+  <link rel="manifest" href="site.webmanifest" />
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="VOLT — Strength Lab" />
+  <meta property="og:title" content="VOLT — Strength Lab" />
+  <meta property="og:description" content="A dark, high-intensity gym engineered for measurable results. First session free." />
+  <meta property="og:url" content="https://voltstrength.lab/" />
+  <meta property="og:image" content="https://images.unsplash.com/photo-1534438327276-14e5300c3a48?auto=format&fit=crop&w=1200&h=630&q=70" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="VOLT — Strength Lab" />
+  <meta name="twitter:description" content="A dark, high-intensity gym engineered for measurable results. First session free." />
+  <meta name="twitter:image" content="https://images.unsplash.com/photo-1534438327276-14e5300c3a48?auto=format&fit=crop&w=1200&h=630&q=70" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="preconnect" href="https://images.unsplash.com" crossorigin />
+  <link rel="preload" as="image" fetchpriority="high" href="https://images.unsplash.com/photo-1534438327276-14e5300c3a48?auto=format&fit=crop&w=1280&q=68" />
+  <link href="https://fonts.googleapis.com/css2?family=Anton&family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <!-- SVG duotone filter (dark → lime) -->
+  <svg class="svg-defs" aria-hidden="true">
+    <filter id="duotone" color-interpolation-filters="sRGB">
+      <feColorMatrix type="matrix" values="0.299 0.587 0.114 0 0  0.299 0.587 0.114 0 0  0.299 0.587 0.114 0 0  0 0 0 1 0"/>
+      <feComponentTransfer>
+        <feFuncR type="table" tableValues="0.03 0.80"/>
+        <feFuncG type="table" tableValues="0.09 1.0"/>
+        <feFuncB type="table" tableValues="0.05 0.12"/>
+      </feComponentTransfer>
+    </filter>
+  </svg>
+
+  <!-- Scroll progress -->
+  <div class="scroll-prog" id="scrollProg" aria-hidden="true"></div>
+
+  <!-- Grain -->
+  <div class="grain" aria-hidden="true"></div>
+
+  <!-- Custom cursor -->
+  <div class="cursor" id="cursor"><span id="cursorLabel"></span></div>
+  <div class="cursor-dot" id="cursorDot"></div>
+
+  <!-- Loader -->
+  <div class="loader" id="loader">
+    <div class="loader__word"><span>V</span><span>O</span><span>L</span><span>T</span></div>
+    <div class="loader__count"><span id="loaderNum">0</span><i>%</i></div>
+    <div class="loader__bar"><div class="loader__fill" id="loaderFill"></div></div>
+  </div>
+
+  <!-- Nav -->
+  <header class="nav" id="nav">
+    <a href="#home" class="nav__logo" data-cursor>VOLT<span>°</span></a>
+    <nav class="nav__links">
+      <a href="programs.html" data-cursor>Programs</a>
+      <a href="inside.html" data-cursor>Inside</a>
+      <a href="coaches.html" data-cursor>Coaches</a>
+      <a href="join.html" data-cursor>Join</a>
+    </nav>
+    <a href="join.html" class="nav__cta" data-cursor data-magnetic><span>Start Training</span><em>→</em></a>
+    <button class="nav__burger" id="burger" aria-label="menu"><span></span><span></span></button>
+  </header>
+
+  <!-- HERO -->
+  <section class="hero" id="home">
+    <div class="hero__media">
+      <video class="hero__img duo" autoplay muted loop playsinline preload="metadata" aria-hidden="true"
+        poster="https://images.unsplash.com/photo-1534438327276-14e5300c3a48?auto=format&fit=crop&w=1280&q=68">
+        <source src="https://videos.pexels.com/video-files/5319759/5319759-hd_1280_720_25fps.mp4" type="video/mp4" />
+      </video>
+      <div class="hero__scrim"></div>
+    </div>
+    <div class="hero__bg-word" aria-hidden="true">POWER</div>
+
+    <div class="hero__inner">
+      <div class="hero__top">
+        <span class="tag"><i></i> Est. 2026 · Strength Lab</span>
+        <p class="hero__sub">Engineered for people who treat the body<br/>like a machine worth tuning.</p>
+      </div>
+
+      <h1 class="hero__title">
+        <span class="line"><span class="word">UN</span><span class="word accent">LEASH</span></span>
+        <span class="line"><span class="word">THE</span> <span class="word">VOLT</span></span>
+      </h1>
+
+      <div class="hero__bottom">
+        <a href="#programs" class="hero__scroll" data-cursor aria-label="Scroll to programs">
+          <span class="hero__scroll-ring">
+            <svg viewBox="0 0 120 120"><defs><path id="circlePath" d="M60,60 m-44,0 a44,44 0 1,1 88,0 a44,44 0 1,1 -88,0" /></defs>
+              <text><textPath href="#circlePath">SCROLL TO ENTER · SCROLL TO ENTER · </textPath></text>
+            </svg>
+            <em>↓</em>
+          </span>
+        </a>
+        <div class="hero__stats">
+          <div class="stat"><b data-count="24">0</b><small>/7 Access</small></div>
+          <div class="stat"><b data-count="38">0</b><small>Elite Coaches</small></div>
+          <div class="stat"><b data-count="12">0</b><small>Training Zones</small></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- MARQUEE -->
+  <section class="marquee" aria-hidden="true">
+    <div class="marquee__track" id="marqueeTrack">
+      <span>STRENGTH</span><span class="dot">⚡</span><span>CONDITIONING</span><span class="dot">⚡</span>
+      <span>MOBILITY</span><span class="dot">⚡</span><span>POWER</span><span class="dot">⚡</span>
+      <span>STRENGTH</span><span class="dot">⚡</span><span>CONDITIONING</span><span class="dot">⚡</span>
+      <span>MOBILITY</span><span class="dot">⚡</span><span>POWER</span><span class="dot">⚡</span>
+    </div>
+  </section>
+
+  <!-- THE STANDARD -->
+  <section class="reveal-band" id="intensity">
+    <div class="reveal-band__outline" aria-hidden="true">01</div>
+    <div class="reveal-band__media">
+      <div class="reveal-band__img">
+        <img class="duo" alt="Heavy barbell session"
+          src="https://images.unsplash.com/photo-1581009146145-b5ef050c2e1e?auto=format&fit=crop&w=1000&q=70" />
+      </div>
+      <div class="reveal-band__badge" aria-hidden="true">
+        <svg viewBox="0 0 160 160"><defs><path id="stdPath" d="M80,80 m-58,0 a58,58 0 1,1 116,0 a58,58 0 1,1 -116,0" /></defs>
+          <text><textPath href="#stdPath"> MEASURED PROGRESS · NO GUESSWORK · </textPath></text></svg>
+        <em>★</em>
+      </div>
+      <div class="reveal-band__stat">
+        <b><span data-count="312">0</span>%</b>
+        <small>Avg strength gain<br/>in year one</small>
+      </div>
+    </div>
+
+    <div class="reveal-band__content">
+      <span class="section-tag reveal-up">( The Standard )</span>
+      <h2 class="reveal-band__head reveal-lines">We don't do comfortable — we do <span class="accent">results</span> you can measure.</h2>
+      <p class="reveal-up">No vanity metrics. Everything you do here is logged, benchmarked and progressed — so the work always points somewhere.</p>
+      <ul class="stdlist">
+        <li class="reveal-up"><span>01</span><div><h4>InBody Composition</h4><p>Fat, muscle and symmetry mapped every four weeks.</p></div></li>
+        <li class="reveal-up"><span>02</span><div><h4>Strength Benchmarks</h4><p>Every major lift tracked and pushed along a curve.</p></div></li>
+        <li class="reveal-up"><span>03</span><div><h4>Periodised Programming</h4><p>Built around your biology — never a template.</p></div></li>
+        <li class="reveal-up"><span>04</span><div><h4>Progress Dashboard</h4><p>Every PR, trend and milestone in one live view.</p></div></li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- PROGRAMS (image tiles) -->
+  <section class="programs" id="programs">
+    <div class="programs__head">
+      <span class="section-tag reveal-up">( Training Programs )</span>
+      <h2 class="reveal-up">Pick your <span class="accent">arena.</span></h2>
+    </div>
+
+    <div class="programs__grid">
+      <article class="ptile" data-cursor="View" style="--r:-2deg">
+        <div class="ptile__img"><img class="duo" loading="lazy" alt="Hypertrophy lab"
+          src="https://images.unsplash.com/photo-1517836357463-d25dfeac3438?auto=format&fit=crop&w=760&q=70" /></div>
+        <div class="ptile__body">
+          <span class="ptile__num">01</span>
+          <h3>Hypertrophy Lab</h3>
+          <p>Science-backed muscle building. Volume, tempo and nutrition dialled to the gram.</p>
+          <span class="ptile__time">45–60 min →</span>
+        </div>
+      </article>
+
+      <article class="ptile" data-cursor="View" style="--r:2deg">
+        <div class="ptile__img"><img class="duo" loading="lazy" alt="Power and olympic lifting"
+          src="https://images.unsplash.com/photo-1526506118085-60ce8714f8c5?auto=format&fit=crop&w=760&q=70" /></div>
+        <div class="ptile__body">
+          <span class="ptile__num">02</span>
+          <h3>Power &amp; Olympic</h3>
+          <p>Cleans, snatches and explosive triple-extension. Build force you can actually use.</p>
+          <span class="ptile__time">60 min →</span>
+        </div>
+      </article>
+
+      <article class="ptile" data-cursor="View" style="--r:2deg">
+        <div class="ptile__img"><img class="duo" loading="lazy" alt="Metcon conditioning"
+          src="https://images.unsplash.com/photo-1434596922112-19c563067271?auto=format&fit=crop&w=760&q=70" /></div>
+        <div class="ptile__body">
+          <span class="ptile__num">03</span>
+          <h3>Metcon Engine</h3>
+          <p>Brutal conditioning circuits that rebuild your gas tank and torch everything.</p>
+          <span class="ptile__time">30 min →</span>
+        </div>
+      </article>
+
+      <article class="ptile" data-cursor="View" style="--r:-2deg">
+        <div class="ptile__img"><img class="duo" loading="lazy" alt="Mobility and flow"
+          src="https://images.unsplash.com/photo-1599058917212-d750089bc07e?auto=format&fit=crop&w=760&q=70" /></div>
+        <div class="ptile__body">
+          <span class="ptile__num">04</span>
+          <h3>Mobility &amp; Flow</h3>
+          <p>Restore range, bulletproof joints and move like you're twenty again.</p>
+          <span class="ptile__time">40 min →</span>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <!-- ROTATING STATEMENT -->
+  <section class="rotate-statement">
+    <h2 class="rotate-statement__text">
+      <span class="rs-word">PAIN</span><span class="rs-word">IS</span><span class="rs-word accent">TEMPORARY</span>
+      <span class="rs-word">OUTPUT</span><span class="rs-word">IS</span><span class="rs-word accent">FOREVER</span>
+    </h2>
+  </section>
+
+  <!-- PINNED HORIZONTAL GALLERY -->
+  <section class="gallery" id="gallery">
+    <div class="gallery__pin" id="galleryPin">
+      <div class="gallery__intro">
+        <span class="section-tag">( Inside the Lab )</span>
+        <h2>Where<br/>work<br/>gets<br/><span class="accent">real.</span></h2>
+        <span class="gallery__hint">scroll →</span>
+      </div>
+      <figure class="gshot"><img class="duo" loading="lazy" alt="Gym floor"
+        src="https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?auto=format&fit=crop&w=820&q=70" /><figcaption>01 · Free Weights</figcaption></figure>
+      <figure class="gshot tall"><img class="duo" loading="lazy" alt="Battle ropes"
+        src="https://images.unsplash.com/photo-1518459031867-a89b944bffe4?auto=format&fit=crop&w=820&q=70" /><figcaption>02 · Conditioning</figcaption></figure>
+      <figure class="gshot"><img class="duo" loading="lazy" alt="Treadmill zone"
+        src="https://images.unsplash.com/photo-1540497077202-7c8a3999166f?auto=format&fit=crop&w=820&q=70" /><figcaption>03 · Engine Room</figcaption></figure>
+      <figure class="gshot tall"><img class="duo" loading="lazy" alt="Dumbbell rack"
+        src="https://images.unsplash.com/photo-1558611848-73f7eb4001a1?auto=format&fit=crop&w=820&q=70" /><figcaption>04 · The Rack</figcaption></figure>
+      <figure class="gshot"><img class="duo" loading="lazy" alt="Athlete recovering"
+        src="https://images.unsplash.com/photo-1532384748853-8f54a8f476e2?auto=format&fit=crop&w=820&q=70" /><figcaption>05 · Recovery</figcaption></figure>
+    </div>
+  </section>
+
+  <!-- COACHES (real portraits) -->
+  <section class="coaches" id="coaches">
+    <div class="coaches__head">
+      <span class="section-tag reveal-up">( The Coaches )</span>
+      <h2 class="reveal-up">Trained by <span class="accent">obsessives.</span></h2>
+    </div>
+    <div class="coaches__row">
+      <div class="coach" data-cursor>
+        <div class="coach__img"><img loading="lazy" alt="Coach Dmitri"
+          src="https://images.unsplash.com/photo-1567013127542-490d757e51fc?auto=format&fit=crop&w=600&q=72" /><span class="coach__tag">01</span></div>
+        <h4>Dmitri Volkov</h4><p>Strength &amp; Powerlifting</p>
+      </div>
+      <div class="coach" data-cursor>
+        <div class="coach__img"><img loading="lazy" alt="Coach Aria"
+          src="https://images.unsplash.com/photo-1594381898411-846e7d193883?auto=format&fit=crop&w=600&q=72" /><span class="coach__tag">02</span></div>
+        <h4>Aria Reyes</h4><p>Olympic Lifting</p>
+      </div>
+      <div class="coach" data-cursor>
+        <div class="coach__img"><img loading="lazy" alt="Coach Kai"
+          src="https://images.unsplash.com/photo-1583454110551-21f2fa2afe61?auto=format&fit=crop&w=600&q=72" /><span class="coach__tag">03</span></div>
+        <h4>Kai Nakamura</h4><p>Conditioning</p>
+      </div>
+      <div class="coach" data-cursor>
+        <div class="coach__img"><img loading="lazy" alt="Coach Sana"
+          src="https://images.unsplash.com/photo-1550345332-09e3ac987658?auto=format&fit=crop&w=600&q=72" /><span class="coach__tag">04</span></div>
+        <h4>Sana Verma</h4><p>Mobility &amp; Rehab</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- STATS BAND over image -->
+  <section class="statband">
+    <div class="statband__img"><img class="duo" loading="lazy" alt="Training intensity"
+      src="https://images.unsplash.com/photo-1571019614242-c5c5dee9f50b?auto=format&fit=crop&w=1280&q=68" /></div>
+    <div class="statband__row">
+      <div class="sb"><b data-count="2400">0</b><small>Members Strong</small></div>
+      <div class="sb"><b data-count="96">0</b><small>% Stay Past Year 1</small></div>
+      <div class="sb"><b data-count="150">0</b><small>Classes / Week</small></div>
+    </div>
+  </section>
+
+  <!-- MARQUEE divider (reverse) -->
+  <section class="marquee marquee--rev" aria-hidden="true">
+    <div class="marquee__track" data-dir="1">
+      <span>NO SHORTCUTS</span><span class="dot">⚡</span><span>PURE OUTPUT</span><span class="dot">⚡</span>
+      <span>SHOW UP</span><span class="dot">⚡</span><span>LEVEL UP</span><span class="dot">⚡</span>
+      <span>NO SHORTCUTS</span><span class="dot">⚡</span><span>PURE OUTPUT</span><span class="dot">⚡</span>
+      <span>SHOW UP</span><span class="dot">⚡</span><span>LEVEL UP</span><span class="dot">⚡</span>
+    </div>
+  </section>
+
+  <!-- JOIN / CTA -->
+  <section class="join" id="join">
+    <div class="join__img"><img class="duo" loading="lazy" alt="Join VOLT"
+      src="https://images.unsplash.com/photo-1534438327276-14e5300c3a48?auto=format&fit=crop&w=1280&q=68" /></div>
+    <div class="join__spin" aria-hidden="true"><span>JOIN</span><span>JOIN</span><span>JOIN</span><span>JOIN</span></div>
+    <div class="join__inner">
+      <span class="section-tag reveal-up">( Ready? )</span>
+      <h2 class="join__title reveal-lines">Your first session<br/>is on <span class="accent">us.</span></h2>
+      <p class="reveal-up">No contracts. No pressure. Just come feel what real training does.</p>
+      <a href="join.html" class="btn-big" data-cursor data-magnetic><span>Claim Free Session</span><em>⚡</em></a>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="footer__big">VOLT°</div>
+    <div class="footer__cols">
+      <div><h5>Visit</h5><p>114 Forge Street<br/>Industrial Quarter</p></div>
+      <div><h5>Hours</h5><p>Open 24 / 7<br/>365 days</p></div>
+      <div><h5>Social</h5><p>Instagram<br/>YouTube · TikTok</p></div>
+      <div><h5>Contact</h5><p>train@volt.lab<br/>+1 (555) 017-9930</p></div>
+    </div>
+    <div class="footer__base"><span>© 2026 VOLT Strength Lab</span><span>Built to break limits.</span></div>
+  </footer>
+
+  <script defer src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script defer src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+  <script defer src="script.js"></script>
+</body>
+</html>

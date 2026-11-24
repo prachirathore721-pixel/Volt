@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>VOLT — Join</title>
+  <meta name="description" content="Join VOLT Strength Lab — membership tiers from Access to Elite, no lock-in contracts, real coaching, and your first session on us." />
+  <meta name="theme-color" content="#070807" />
+  <meta name="color-scheme" content="dark" />
+  <meta name="robots" content="index, follow" />
+  <link rel="canonical" href="https://voltstrength.lab/join.html" />
+  <link rel="icon" href="favicon.svg" type="image/svg+xml" />
+  <link rel="apple-touch-icon" href="favicon.svg" />
+  <link rel="manifest" href="site.webmanifest" />
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="VOLT — Strength Lab" />
+  <meta property="og:title" content="VOLT — Join" />
+  <meta property="og:description" content="Membership tiers from Access to Elite, no lock-in contracts, and your first session on us." />
+  <meta property="og:url" content="https://voltstrength.lab/join.html" />
+  <meta property="og:image" content="https://images.unsplash.com/photo-1534438327276-14e5300c3a48?auto=format&fit=crop&w=1200&h=630&q=70" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="VOLT — Join" />
+  <meta name="twitter:description" content="No lock-in contracts. First session on us." />
+  <meta name="twitter:image" content="https://images.unsplash.com/photo-1534438327276-14e5300c3a48?auto=format&fit=crop&w=1200&h=630&q=70" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="preconnect" href="https://images.unsplash.com" crossorigin />
+  <link rel="preload" as="image" fetchpriority="high" href="https://images.unsplash.com/photo-1534438327276-14e5300c3a48?auto=format&fit=crop&w=1280&q=68" />
+  <link href="https://fonts.googleapis.com/css2?family=Anton&family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <svg class="svg-defs" aria-hidden="true">
+    <filter id="duotone" color-interpolation-filters="sRGB">
+      <feColorMatrix type="matrix" values="0.299 0.587 0.114 0 0  0.299 0.587 0.114 0 0  0.299 0.587 0.114 0 0  0 0 0 1 0"/>
+      <feComponentTransfer>
+        <feFuncR type="table" tableValues="0.03 0.80"/><feFuncG type="table" tableValues="0.09 1.0"/><feFuncB type="table" tableValues="0.05 0.12"/>
+      </feComponentTransfer>
+    </filter>
+  </svg>
+  <div class="scroll-prog" id="scrollProg" aria-hidden="true"></div>
+  <div class="grain" aria-hidden="true"></div>
+  <div class="cursor" id="cursor"><span id="cursorLabel"></span></div>
+  <div class="cursor-dot" id="cursorDot"></div>
+  <div class="loader" id="loader">
+    <div class="loader__word"><span>V</span><span>O</span><span>L</span><span>T</span></div>
+    <div class="loader__count"><span id="loaderNum">0</span><i>%</i></div>
+    <div class="loader__bar"><div class="loader__fill" id="loaderFill"></div></div>
+  </div>
+
+  <header class="nav" id="nav">
+    <a href="index.html" class="nav__logo" data-cursor>VOLT<span>°</span></a>
+    <nav class="nav__links">
+      <a href="programs.html" data-cursor>Programs</a>
+      <a href="inside.html" data-cursor>Inside</a>
+      <a href="coaches.html" data-cursor>Coaches</a>
+      <a href="join.html" class="is-active" data-cursor>Join</a>
+    </nav>
+    <a href="#tiers" class="nav__cta" data-cursor data-magnetic><span>See Plans</span><em>→</em></a>
+    <button class="nav__burger" id="burger" aria-label="menu"><span></span><span></span></button>
+  </header>
+
+  <section class="page-hero">
+    <div class="page-hero__media"><img class="duo" alt="Join VOLT"
+      src="https://images.unsplash.com/photo-1534438327276-14e5300c3a48?auto=format&fit=crop&w=1280&q=68" /></div>
+    <div class="page-hero__scrim"></div>
+    <div class="page-hero__bgword" aria-hidden="true">JOIN</div>
+    <div class="page-hero__inner">
+      <span class="page-hero__tag">( Membership )</span>
+      <h1 class="page-hero__title"><span class="lh"><span>JOIN</span></span><span class="lh"><span>THE</span> <span class="accent">VOLT</span></span></h1>
+      <p class="page-hero__sub">No contracts you can't leave. No fluff. Just a room full of people getting measurably stronger — and your first session is on us.</p>
+    </div>
+  </section>
+
+  <section class="marquee" aria-hidden="true">
+    <div class="marquee__track">
+      <span>NO CONTRACTS</span><span class="dot">⚡</span><span>REAL COACHING</span><span class="dot">⚡</span>
+      <span>24/7 ACCESS</span><span class="dot">⚡</span><span>FIRST SESSION FREE</span><span class="dot">⚡</span>
+      <span>NO CONTRACTS</span><span class="dot">⚡</span><span>REAL COACHING</span><span class="dot">⚡</span>
+      <span>24/7 ACCESS</span><span class="dot">⚡</span><span>FIRST SESSION FREE</span><span class="dot">⚡</span>
+    </div>
+  </section>
+
+  <div class="sec-head" id="tiers"><span class="section-tag reveal-up">( Plans )</span><h2 class="reveal-up">Pick your <span class="accent">tier.</span></h2></div>
+  <section class="tiers">
+    <div class="tier reveal-up">
+      <div class="tier__name">Access</div>
+      <div class="tier__price">$49<small>/mo</small></div>
+      <ul>
+        <li>24/7 gym floor access</li>
+        <li>All zones &amp; equipment</li>
+        <li>InBody scan quarterly</li>
+        <li>App workout library</li>
+      </ul>
+      <a href="#claim" class="btn-tier" data-cursor>Choose Access</a>
+    </div>
+    <div class="tier tier--featured reveal-up">
+      <div class="tier__name">Performance</div>
+      <div class="tier__price">$129<small>/mo</small></div>
+      <ul>
+        <li>Everything in Access</li>
+        <li>Personalised periodised plan</li>
+        <li>2 coached sessions / week</li>
+        <li>Monthly strength benchmarks</li>
+        <li>Recovery suite included</li>
+      </ul>
+      <a href="#claim" class="btn-tier" data-cursor>Choose Performance</a>
+    </div>
+    <div class="tier reveal-up">
+      <div class="tier__name">Elite</div>
+      <div class="tier__price">$249<small>/mo</small></div>
+      <ul>
+        <li>Everything in Performance</li>
+        <li>Unlimited 1-to-1 coaching</li>
+        <li>Nutrition &amp; sleep coaching</li>
+        <li>Priority booking</li>
+        <li>Competition prep</li>
+      </ul>
+      <a href="#claim" class="btn-tier" data-cursor>Choose Elite</a>
+    </div>
+  </section>
+
+  <section class="statband">
+    <div class="statband__img"><img class="duo" loading="lazy" alt="Members training"
+      src="https://images.unsplash.com/photo-1571019614242-c5c5dee9f50b?auto=format&fit=crop&w=1280&q=68" /></div>
+    <div class="statband__row">
+      <div class="sb"><b class="js-count" data-count="2400">0</b><small>Members strong</small></div>
+      <div class="sb"><b class="js-count" data-count="96">0</b><small>% stay past year 1</small></div>
+      <div class="sb"><b class="js-count" data-count="150">0</b><small>Classes / week</small></div>
+    </div>
+  </section>
+
+  <section class="join" id="claim">
+    <div class="join__img"><img class="duo" loading="lazy" alt="Claim your session"
+      src="https://images.unsplash.com/photo-1581009146145-b5ef050c2e1e?auto=format&fit=crop&w=1280&q=68" /></div>
+    <div class="join__spin" aria-hidden="true"><span>FREE</span><span>FREE</span><span>FREE</span><span>FREE</span></div>
+    <div class="join__inner">
+      <span class="section-tag reveal-up">( Ready? )</span>
+      <h2 class="join__title reveal-lines">Your first session<br/>is on <span class="accent">us.</span></h2>
+      <p class="reveal-up">No contracts. No pressure. Just come feel what real training does — then pick the tier that fits.</p>
+      <a href="mailto:train@volt.lab" class="btn-big" data-cursor data-magnetic><span>Claim Free Session</span><em>⚡</em></a>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="footer__big">VOLT°</div>
+    <div class="footer__cols">
+      <div><h5>Visit</h5><p>114 Forge Street<br/>Industrial Quarter</p></div>
+      <div><h5>Hours</h5><p>Open 24 / 7<br/>365 days</p></div>
+      <div><h5>Social</h5><p>Instagram<br/>YouTube · TikTok</p></div>
+      <div><h5>Contact</h5><p>train@volt.lab<br/>+1 (555) 017-9930</p></div>
+    </div>
+    <div class="footer__base"><span>© 2026 VOLT Strength Lab</span><span>Built to break limits.</span></div>
+  </footer>
+
+  <script defer src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script defer src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+  <script defer src="script.js"></script>
+</body>
+</html>
